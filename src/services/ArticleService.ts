@@ -11,7 +11,7 @@ export class ArticleService {
         await Promise.all(ids.map(async (id, index) => {
             if (index > limit) { return }
             const resp = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
-            results.push(resp.request.response);
+            results.push(JSON.parse(resp.request.response));
         }));
         return results;
     }

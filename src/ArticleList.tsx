@@ -41,7 +41,7 @@ export class ArticleListComp extends Component<ArticleProps, ArticleState> {
                  <div>{this.state.articleIds}</div>
                  <ul>
                     {this.state.articleData.map((value, index) => {
-                        return <li key={index}>{value}</li>
+                        return <li key={index}>{value.url}</li>
                     })}
                 </ul>
             </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ArticleList } from './ArticleList';
+import { articleData } from './data/articles';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +21,8 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+
+      <ArticleList articles={articleData}></ArticleList>
     </div>
   );
 }

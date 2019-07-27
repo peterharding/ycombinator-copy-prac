@@ -1,13 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { ArticleList } from './ArticleList';
+import { ArticleList, ArticleListComp } from './ArticleList';
 import { articleData } from './data/articles';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -20,9 +20,11 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
 
       <ArticleList articles={articleData}></ArticleList>
+
+      <ArticleListComp articles={articleData}></ArticleListComp>
     </div>
   );
 }
